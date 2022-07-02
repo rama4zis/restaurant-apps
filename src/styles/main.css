@@ -1,0 +1,269 @@
+:root {
+  --side-margin: 25px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+img {
+  display: block;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  padding: 8px;
+  background-color: #bf1722;
+  color: white;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+nav {
+  height: 75px;
+  background-color: #555555;
+}
+
+nav .logo {
+  float: left;
+  margin-left: var(--side-margin);
+  height: 100%;
+  color: #fff;
+  font-weight: bold;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .right-nav {
+  float: right;
+  margin-right: var(--side-margin);
+  height: 100%;
+
+  /* make center  */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* ======================== */
+
+.banner {
+  width: 100%;
+  height: 400px;
+  /* background-color: #555555; */
+  overflow: hidden;
+
+  margin-bottom: 10rem;
+}
+
+.banner img {
+  width: 100%;
+  /* height: 100%; */
+}
+
+/* ======================== */
+
+.container {
+  width: 65%;
+  margin: 0 auto;
+}
+
+.container-title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 5rem;
+}
+
+.container-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 3rem;
+}
+
+/* ======================= */
+
+.card-item {
+  width: 100%;
+  /* border: 1px solid #ccc; */
+  box-shadow: 5px 8px 10px 3px rgba(0, 0, 0, 0.1);
+}
+
+.card-item-image-wrap {
+  width: 100%;
+  position: relative;
+}
+
+.card-item-image-wrap img {
+  width: 100%;
+  /* height: 100%; */
+}
+
+.card-item-image-wrap .image-tag {
+  position: absolute;
+  top: 10px;
+  /* left: 16px; */
+  background-color: #fff;
+  padding: 8px 15px;
+}
+
+.card-item-content {
+  width: 100%;
+  padding: 15px;
+}
+
+.card-item-content .rating {
+  color: #f5b914;
+  margin: 1rem 0;
+}
+
+.card-item-content .res-name {
+  color: #2b2b2b;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.card-item-content .res-desc {
+  color: #7e7e7e;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+/* ======================  */
+
+.footer {
+  border-top: 1px solid #ccc;
+  margin-top: 10rem;
+  width: 100%;
+  height: 100px;
+
+  /* make center  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-button,
+.menu-button {
+  display: none;
+}
+
+/* ================== ///////////// ===============  */
+
+@media (max-width: 1024px) {
+  .container {
+    width: 90%;
+  }
+
+  .menu-button {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container-content {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  nav .logo {
+    /* width: 100%; */
+    margin: 0;
+    padding-left: var(--side-margin);
+    /* justify-content: center; */
+  }
+
+  nav .right-nav {
+    display: none;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    background-color: #555555;
+    z-index: 10;
+
+    transition: all 0.5s;
+  }
+
+  nav .right-nav ul {
+    display: block;
+  }
+
+  nav ul li a {
+    display: block;
+    width: 100%;
+    padding: 1rem var(--side-margin);
+  }
+
+  .menu-button {
+    display: flex;
+    background-color: transparent;
+    border: none;
+  }
+
+  .menu-button,
+  .close-button {
+    float: right;
+    /* make center  */
+    padding-right: var(--side-margin);
+    height: 100%;
+
+    justify-content: center;
+    align-items: center;
+
+    color: #fff;
+
+    background-color: transparent;
+    border: none;
+  }
+
+  .active {
+    display: block !important;
+    animation: fade 0.5s;
+  }
+
+  .show-nav {
+    display: block !important;
+  }
+
+  .hide-nav {
+    display: none !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .banner {
+    margin-bottom: 5rem;
+  }
+
+  .banner img {
+    width: auto;
+    height: 100%;
+  }
+
+  .container-content {
+    grid-template-columns: 1fr;
+  }
+}
