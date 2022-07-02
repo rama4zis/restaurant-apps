@@ -30,10 +30,12 @@ img {
 nav {
   height: 75px;
   background-color: #555555;
+  display: flex;
+  justify-content: space-between;
 }
 
 nav .logo {
-  float: left;
+  /* float: left; */
   margin-left: var(--side-margin);
   height: 100%;
   color: #fff;
@@ -45,7 +47,7 @@ nav .logo {
 }
 
 nav .right-nav {
-  float: right;
+  /* float: right; */
   margin-right: var(--side-margin);
   height: 100%;
 
@@ -65,7 +67,7 @@ nav ul li a {
   color: #fff;
   text-decoration: none;
   padding: 10px;
-  font-size: 1.25rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 
@@ -189,6 +191,13 @@ nav ul li a {
     grid-template-columns: 1fr 1fr;
   }
 
+  nav {
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    /* grid-template: 1fr 1fr; */
+  }
+
   nav .logo {
     /* width: 100%; */
     margin: 0;
@@ -205,6 +214,8 @@ nav ul li a {
     z-index: 10;
 
     transition: all 0.5s;
+    position:absolute;
+    top: 75px;
   }
 
   nav .right-nav ul {
@@ -221,11 +232,11 @@ nav ul li a {
     display: flex;
     background-color: transparent;
     border: none;
+    font-size: 44px;
   }
 
-  .menu-button,
-  .close-button {
-    float: right;
+  .menu-button {
+    /* float: right; */
     /* make center  */
     padding-right: var(--side-margin);
     height: 100%;
